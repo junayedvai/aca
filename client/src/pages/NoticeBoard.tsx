@@ -53,12 +53,12 @@ export default function NoticeBoard() {
                 const preview = plainText.length > excerptLength ? `${plainText.slice(0, excerptLength).trim()}...` : plainText;
                 return (
                   <article key={notice.id} className="premium-card p-6 sm:p-7">
-                    <div className="mb-4 flex items-center justify-between gap-3">
+                    <div className="mb-4 flex flex-wrap items-start justify-between gap-3 sm:items-center">
                       <span className="rounded-full bg-light-golden px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-golden">Notice</span>
-                      <span className="text-xs font-semibold text-gray">Published: {formatPublishedAt(notice.publishedAt)}</span>
+                      <span className="text-xs font-semibold text-gray break-words sm:text-right">Published: {formatPublishedAt(notice.publishedAt)}</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-black sm:text-3xl">{notice.title}</h3>
-                    <p className="mt-3 text-base leading-8 text-gray sm:text-lg">{preview || "No notice details provided."}</p>
+                    <h3 className="break-words text-2xl font-bold text-black sm:text-3xl">{notice.title}</h3>
+                    <p className="mt-3 break-words text-base leading-8 text-gray sm:text-lg">{preview || "No notice details provided."}</p>
                     <Link href={`/notices/${notice.id}`} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-golden">
                       {noticeBoard?.readMoreText || "Read full notice"} <ArrowRight size={16} />
                     </Link>

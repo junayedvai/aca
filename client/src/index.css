@@ -144,6 +144,15 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     background-image: radial-gradient(circle at top right, rgba(59,130,246,0.16), transparent 40%), radial-gradient(circle at bottom left, rgba(6,182,212,0.10), transparent 46%), linear-gradient(180deg, #fbfdff 0%, #f5f9ff 100%);
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  iframe {
+    max-width: 100%;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -525,6 +534,7 @@
     color: #475569;
     line-height: 1.9;
     font-size: 0.98rem;
+    overflow-wrap: anywhere;
   }
 
   .premium-card {
